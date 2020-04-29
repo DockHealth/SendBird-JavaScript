@@ -232,7 +232,8 @@ class SBWidget {
       });
       this.spinner.insert(chatBoard.userContent);
 
-      this.sb.getUserList(null, userList => {
+      var whiteList = this.initializeWhiteList();
+      this.sb.getUserListById(null, whiteList, userList => {  
         this.spinner.remove(chatBoard.userContent);
         this.setUserList(chatBoard, userList);
       });
@@ -498,6 +499,10 @@ class SBWidget {
     }
   }
 
+  initializeWhiteList(){
+    return ['DummyTwo', 'BigCheese', 'BigBoss', 'Dock'];
+  }
+
   setUserList(target, userList) {
     let userContent = target.userContent;
     this.chatSection.createUserList(userContent);
@@ -525,7 +530,9 @@ class SBWidget {
       }
     }
     this.chatSection.addUserListScrollEvent(target, () => {
-      this.sb.getUserList(null, userList => {
+      //this.sb.getUserList(null, userList => {
+      var whiteList = this.initializeWhiteList();
+      this.sb.getUserListById(null, whiteList, userList => {
         this.setUserList(target, userList);
       });
     });
@@ -652,9 +659,11 @@ class SBWidget {
         }
       }
     });
+
     this.chatSection.addClickEvent(chatBoard.inviteBtn, () => {
-      var _getUserList = (channel, loadmore) => {
-        this.sb.getUserList(channel.url, userList => {
+      var _getUserList = (channel, loadmore) => { //
+        var whiteList = this.initializeWhiteList();
+        this.sb.getUserListById(channel.url, whiteList, userList => {
           if (!loadmore) {
             this.spinner.remove(this.popup.invitePopup.list);
           }
@@ -685,6 +694,7 @@ class SBWidget {
             });
             this.popup.invitePopup.list.appendChild(item);
           }
+          //this.setWhiteList(whiteList); //WhiteList line
         });
       };
 

@@ -53,6 +53,64 @@ $color-popup-background:              $color-gray-lightest !default;
 $color-popup-bottom-background:       $color-gray-lighter !default;
 $color-popup-count-background:        #F0F0F2 !default;
 
+
+// primary
+$oPlusRed: #ec4f3e !default;
+$midnightBlue: #213a56 !default;
+$brightBlue: #00a2e5 !default;
+$darkBlue: #074a86 !default;
+
+// old primary
+$accentYellow: #feb52b !default;
+$orange: #ef8a23 !default;
+
+// secondary
+$purplePassion: #553bbe !default;
+$blueOcean: #2bacfb !default;
+$tomatoInYoFace: #ea4739 !default;
+$orangeJulius: #fd8914 !default;
+$keyLimePie: #bad441 !default;
+$bananaHammock: #fecd21 !default;
+$dirtyBanana: #feb52b !default;
+$creamPuff: #f8f5ee !default;
+
+// grey
+$darkGrey: #1e2e40 !default;
+$mediumGrey: #3d4858 !default;
+$coolGrey1: #8492a4 !default;
+$coolGrey2: #c1ccda !default;
+$coolGrey3: #e5e9f2 !default;
+$coolGrey4: #f9fafc !default;
+
+// COLORS NOT EXISTING IN GLOBAL PALETTE
+$error: #e40909 !default;
+$lightGrey: #f3f5f6 !default;
+$black: #000000 !default;
+$white: #ffffff !default;
+$lightCyanBlue: #009fcd !default;
+$lighterCyanBlue: #0ca1c7 !default;
+$cyanBlue: #007cab !default;
+$darkGreyBlue: #125375 !default;
+$greyBlue: #2e3a43 !default;
+$softCyan: #a6dcea !default;
+$unknownGrey1: #303538 !default;
+$unknownGrey2: #ddf2f7 !default;
+$unknownGrey3: #aab8c3 !default;
+$unknownGrey4: #ededf0 !default;
+$unknownGrey5: #ababb2 !default;
+$unknownGrey6: #dedee2 !default;
+$unknownGrey7: #5e6366 !default;
+$paleBlue: #d4f3ff !default;
+$vividPink: #d9036b !default;
+$veryDarkBlue: #2a4a70 !default;
+$memberGreen: #00a73c !default;
+$taskCheckboxGreen: #20b255 !default;
+$featureBlue1: #011845 !default;
+$featureBlue2: #1a2d56 !default;
+$scrollbarGrey: #939aa4 !default;
+
+
+
 // Letter Spacing
 $letter-spacing-default:  0.85px;
 

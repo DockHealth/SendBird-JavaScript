@@ -168,10 +168,10 @@
     cursor: pointer;
     @include border-radius(50%);
     @include box-shadow(0 1px 6px rgba(0,0,0,0.06), 0 2px 32px rgba(0,0,0,0.16));
-    background-color: $color-purple;
+    background-color: $midnightBlue;
 
     @include hover {
-      background-color: $color-widget-background-hover;
+      background-color: $brightBlue;
       @include box-shadow(0 1px 9px rgba(0,0,0,0.28), 0 2px 32px rgba(0,0,0,0.16));
     }
 
@@ -199,9 +199,9 @@
   .sb-common-btn {
     @include reset();
     padding: 0 16px;
-    border: 1px solid $color-button-border;
-    background-color: $color-button-background;
-    color: $color-white;
+    border: 1px solid $scrollbarGrey;
+    background-color: $blueOcean;
+    color: $coolGrey4;
     cursor: pointer;
     @include border-radius(3px);
     @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.75));
@@ -210,8 +210,8 @@
     }
   }
   .sb-common-btn.disabled {
-    background-color: $color-button-background-disabled;
-    border: 1px solid $color-button-border-disabled;
+    background-color: $mediumGrey;
+    border: 1px solid $scrollbarGrey;
     @include hover {
       @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.75));
     }
@@ -233,7 +233,7 @@
       @include reset();
       width: calc(100% - 24px);
       height: 36px;
-      background-color: $color-purple;
+      background-color: $darkBlue;
       padding: 0 12px;
       border-bottom: 1px solid $color-list-top-border;
 
@@ -346,8 +346,8 @@
         @include border-radius(3px);
         @include focus {
           outline: none;
-          border: 1px solid $color-purple-dark;
-          @include box-shadow(0 0 4px $color-purple-light);
+          border: 1px solid $darkGrey;
+          @include box-shadow(0 0 4px $darkGrey);
         }
       }
 
@@ -370,7 +370,7 @@
             width: 8px;
             height: 8px;
             margin-top: 4px;
-            background-color: $color-button-spinner;
+            background-color: $darkGrey;
           }
           :nth-child(2) {
             margin: 0 4px;
@@ -1073,7 +1073,7 @@
       .message-item {
         float: inherit;
         .text {
-          background: $color-purple;
+          background: $purplePassion;
           color: $color-white;
         }
         .image {

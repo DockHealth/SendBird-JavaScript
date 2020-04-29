@@ -246,6 +246,33 @@ class SendBirdAdapter {
       });
   }
 
+  
+  getUserListById(channelUrl, whiteList, cb) {
+    if (!this.userListQuery) {
+      this.userListQuery = this.sb.createApplicationUserListQuery();
+      this.userListQuery.limit = 30;
+      this.userListQuery.userIdsFilter = whiteList; //Set the whitelist...
+    }
+    return new Promise((resolve, reject) => {
+      const users = [];
+      return this._loadUserListFilter(
+        this.userListQuery,
+        channelUrl,
+        users,
+        resolve,
+        reject
+      );
+    })
+      .then(userList => {
+        cb(userList);
+      })
+      .catch(error => {
+        console.error(error);
+        cb([]);
+      });
+  }
+
+
   /*
   Handler
    */
